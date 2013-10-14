@@ -1,0 +1,17 @@
+/** USERS TABLE **/
+CREATE TABLE IF NOT EXISTS users (
+	_id INTEGER PRIMARY KEY,
+	name TEXT NOT NULL,
+	nickname TEXT NOT NULL,
+	email TEXT NOT NULL,
+	password TEXT NOT NULL,
+	logged INTEGER NOT NULL
+);
+
+/** MOOD TABLE **/
+CREATE TABLE IF NOT EXISTS mood (
+	_id INTEGER PRIMARY KEY,
+	content TEXT NOT NULL,
+	post_date DATETIME NOT NULL,
+);
+
