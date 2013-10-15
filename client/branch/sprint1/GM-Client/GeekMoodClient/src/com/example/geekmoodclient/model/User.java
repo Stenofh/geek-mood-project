@@ -14,6 +14,7 @@ public class User implements Serializable {
     private String nickname;
     private String email;
     private String password;
+    private String image;
     private int logged;
 
     public User() {
@@ -116,6 +117,14 @@ public class User implements Serializable {
 	} else if (!password.equals(other.password))
 	    return false;
 	return true;
+    }
+
+    public String getImage() {
+	return image;
+    }
+
+    public void setImage(String image) {
+	this.image = image;
     }
 
     

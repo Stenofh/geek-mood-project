@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS users (
 	nickname TEXT NOT NULL,
 	email TEXT NOT NULL,
 	password TEXT NOT NULL,
+	image TEXT,
 	logged INTEGER NOT NULL
 );
 
@@ -12,6 +13,7 @@ CREATE TABLE IF NOT EXISTS users (
 CREATE TABLE IF NOT EXISTS mood (
 	_id INTEGER PRIMARY KEY,
 	content TEXT NOT NULL,
+	image TEXT,
 	post_date DATETIME NOT NULL,
 );
 

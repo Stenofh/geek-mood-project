@@ -12,6 +12,7 @@ public class Mood implements Serializable{
     private long id;
     private String content;
     private Date postDate;
+    private String image;
     
     public Mood(){
 	
@@ -74,6 +75,14 @@ public class Mood implements Serializable{
 	} else if (!postDate.equals(other.postDate))
 	    return false;
 	return true;
+    }
+
+    public String getImage() {
+	return image;
+    }
+
+    public void setImage(String image) {
+	this.image = image;
     }
     
     
