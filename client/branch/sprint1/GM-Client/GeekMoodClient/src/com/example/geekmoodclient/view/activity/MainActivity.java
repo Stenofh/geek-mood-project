@@ -1,4 +1,4 @@
-package com.example.geekmoodclient.view;
+package com.example.geekmoodclient.view.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
