@@ -1,45 +1,95 @@
 package com.geekmood.server.model;
 
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="post")
 public class Post {
 
-	private int user_id;
-	private int mood_id;
-	private int countShow;
-	private int countTeleze;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="post_id")
+    private long id;
 
-	public Post() {
-	}
+    @Column(name="show_count")
+    private int countShow;
+    
+    @Column(name="teleze_count")
+    private int countTeleze;
 
-	public int getUser_id() {
-		return user_id;
-	}
+    @OneToOne
+    @JoinColumn(name="user_id")
+    private User user;
+    
+    @OneToOne
+    @JoinColumn(name="mood_id")
+    private Mood mood;
+    
+    @OneToMany( mappedBy = "post" )
+    private List<Coment> coments;
 
-	public void setUser_id(final int user_id) {
-		this.user_id = user_id;
-	}
+    public Post() {
+    }
 
-	public int getMood_id() {
-		return mood_id;
-	}
+    public int getCountShow() {
+	return countShow;
+    }
 
-	public void setMood_id(final int mood_id) {
-		this.mood_id = mood_id;
-	}
+    public void setCountShow(final int countShow) {
+	this.countShow = countShow;
+    }
 
-	public int getCountShow() {
-		return countShow;
-	}
+    public int getCountTeleze() {
+	return countTeleze;
+    }
 
-	public void setCountShow(final int countShow) {
-		this.countShow = countShow;
-	}
+    public void setCountTeleze(final int countTeleze) {
+	this.countTeleze = countTeleze;
+    }
 
-	public int getCountTeleze() {
-		return countTeleze;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public void setCountTeleze(final int countTeleze) {
-		this.countTeleze = countTeleze;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Mood getMood() {
+        return mood;
+    }
+
+    public void setMood(Mood mood) {
+        this.mood = mood;
+    }
+
+    public List<Coment> getComents() {
+        return coments;
+    }
+
+    public void setComents(List<Coment> coments) {
+        this.coments = coments;
+    }
+    
+    
+
+    
 }
