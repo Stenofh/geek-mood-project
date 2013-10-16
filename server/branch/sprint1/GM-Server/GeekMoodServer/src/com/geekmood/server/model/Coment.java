@@ -8,40 +8,48 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 @Entity
-@Table(name="coment")
+@Table(name = "coment")
 public class Coment {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="coment_id")
-    private long id;
-    
-    @Column(name="content")
-    private String content;
-    
-    @ManyToOne
-    @JoinColumn(name="post_id")
-    private Post post;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "coment_id")
+	private long id;
 
-    public Coment() {
-    }
+	@Column(name = "content")
+	private String content;
 
-    public long getId() {
-	return id;
-    }
+	@ManyToOne
+	@JoinColumn(name = "post_id")
+	private Post post;
 
-    public void setId(final long id) {
-	this.id = id;
-    }
+	public Coment() {
+	}
 
-    public String getContent() {
-        return content;
-    }
+	public Coment(long id, String content, Post post) {
+		this.id = id;
+		this.content = content;
+		this.post = post;
+	}
 
-    public void setContent(String content) {
-        this.content = content;
-    }
+	public long getId() {
+		return id;
+	}
+
+	public void setId(final long id) {
+		this.id = id;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
 
 }

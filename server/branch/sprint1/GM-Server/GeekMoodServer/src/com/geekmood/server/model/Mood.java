@@ -6,7 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 @Entity
 @Table(name="mood")
 public class Mood {
@@ -25,6 +27,13 @@ public class Mood {
     @Column(name="image_path")
     private String imagePath;
 
+    public Mood(long id, String name, String description, String imagePath) {
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.imagePath = imagePath;
+    }
+    
     public Mood() {
     }
 
