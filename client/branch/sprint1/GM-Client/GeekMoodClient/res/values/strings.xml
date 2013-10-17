@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Nerd Mood</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configura&#231;&#245;es</string>
     <string name="hello_world">Hello world!</string>
     <string name="teste">Teste de commit da Amanda!</string>
     <string name="cadastrar">Cadastrar</string>
@@ -11,5 +11,8 @@
     <string name="senha">Senha</string>
     <string name="nome">Nome</string>
     <string name="apelido">Apelido</string>
+    <string name="show_mood">Show, hein!</string>
+    <string name="leso_mood">Telez&#233;!</string>
+    <string name="coments_mood">Coment&#225;rios</string>
 
 </resources>
