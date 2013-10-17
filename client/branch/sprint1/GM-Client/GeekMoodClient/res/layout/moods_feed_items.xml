@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imv_friend_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/txv_friend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imv_friend_photo"
+        android:layout_toRightOf="@+id/imv_friend_photo" />
+
+    <TextView
+        android:id="@+id/txv_friend_post_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imv_friend_photo" />
+
+    <ImageView
+        android:id="@+id/imv_friend_post_mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txv_friend_post_content"
+        android:contentDescription="@null" />
+    
+     <LinearLayout
+        android:id="@+id/lnl_friend_moods_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imv_friend_post_mood"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_show_mood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/show_mood" />
+
+        <Button
+            android:id="@+id/btn_leso_mood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/leso_mood" />
+
+        <Button
+            android:id="@+id/btn_comments_mood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/coments_mood" />
+    </LinearLayout>
+    
+
+</RelativeLayout>
