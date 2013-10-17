@@ -15,41 +15,41 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "coment")
 public class Coment {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "coment_id")
-	private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "coment_id")
+    private long id;
 
-	@Column(name = "content")
-	private String content;
+    @Column(name = "content")
+    private String content;
 
-	@ManyToOne
-	@JoinColumn(name = "post_id")
-	private Post post;
+    @ManyToOne
+    @JoinColumn(name = "post_id")
+    private Post post;
 
-	public Coment() {
-	}
+    public Coment() {
+    }
 
-	public Coment(long id, String content, Post post) {
-		this.id = id;
-		this.content = content;
-		this.post = post;
-	}
+    public Coment(long id, String content, Post post) {
+	this.id = id;
+	this.content = content;
+	this.post = post;
+    }
 
-	public long getId() {
-		return id;
-	}
+    public long getId() {
+	return id;
+    }
 
-	public void setId(final long id) {
-		this.id = id;
-	}
+    public void setId(final long id) {
+	this.id = id;
+    }
 
-	public String getContent() {
-		return content;
-	}
+    public String getContent() {
+	return content;
+    }
 
-	public void setContent(String content) {
-		this.content = content;
-	}
+    public void setContent(String content) {
+	this.content = content;
+    }
 
 }

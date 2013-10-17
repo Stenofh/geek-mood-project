@@ -10,80 +10,80 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "user_id")
-	private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
+    private long id;
 
-	@Column(name = "name")
-	private String name;
+    @Column(name = "name")
+    private String name;
 
-	@Column(name = "email")
-	private String email;
+    @Column(name = "email")
+    private String email;
 
-	@Column(name = "nickname")
-	private String nickname;
+    @Column(name = "nickname")
+    private String nickname;
 
-	@Column(name = "image_path")
-	private String imagePath;
+    @Column(name = "image_path")
+    private String imagePath;
 
-	@Column(name = "password")
-	private String password;
+    @Column(name = "user_password")
+    private String password;
 
-	public User() {
-	}
+    public User() {
+    }
 
-	public User(long id, String name, String email, String nickname,
-			String imagePath, String password) {
-		this.id = id;
-		this.name = name;
-		this.email = email;
-		this.nickname = nickname;
-		this.imagePath = imagePath;
-		this.password = password;
-	}
+    public User(long id, String name, String email, String nickname,
+	    String imagePath, String password) {
+	this.id = id;
+	this.name = name;
+	this.email = email;
+	this.nickname = nickname;
+	this.imagePath = imagePath;
+	this.password = password;
+    }
 
-	public long getId() {
-		return id;
-	}
+    public long getId() {
+	return id;
+    }
 
-	public void setId(final long id) {
-		this.id = id;
-	}
+    public void setId(final long id) {
+	this.id = id;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+	return name;
+    }
 
-	public void setName(final String name) {
-		this.name = name;
-	}
+    public void setName(final String name) {
+	this.name = name;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public String getEmail() {
+	return email;
+    }
 
-	public void setEmail(final String email) {
-		this.email = email;
-	}
+    public void setEmail(final String email) {
+	this.email = email;
+    }
 
-	public String getNickname() {
-		return nickname;
-	}
+    public String getNickname() {
+	return nickname;
+    }
 
-	public void setNickname(final String nickname) {
-		this.nickname = nickname;
-	}
+    public void setNickname(final String nickname) {
+	this.nickname = nickname;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public String getPassword() {
+	return password;
+    }
 
-	public void setPassword(final String password) {
-		this.password = password;
-	}
+    public void setPassword(final String password) {
+	this.password = password;
+    }
 
 }

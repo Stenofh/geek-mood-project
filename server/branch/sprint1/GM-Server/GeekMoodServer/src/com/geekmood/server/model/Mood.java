@@ -10,30 +10,30 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 @Entity
-@Table(name="mood")
+@Table(name = "mood")
 public class Mood {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="mood_id")
+    @Column(name = "mood_id")
     private long id;
-    
-    @Column(name="name")
+
+    @Column(name = "mood_name")
     private String name;
-  
-    @Column(name="description")
+
+    @Column(name = "description")
     private String description;
-    
-    @Column(name="image_path")
+
+    @Column(name = "image_path")
     private String imagePath;
 
     public Mood(long id, String name, String description, String imagePath) {
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.imagePath = imagePath;
+	this.id = id;
+	this.name = name;
+	this.description = description;
+	this.imagePath = imagePath;
     }
-    
+
     public Mood() {
     }
 
@@ -62,13 +62,11 @@ public class Mood {
     }
 
     public String getImagePath() {
-        return imagePath;
+	return imagePath;
     }
 
     public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
+	this.imagePath = imagePath;
     }
-
-   
 
 }
