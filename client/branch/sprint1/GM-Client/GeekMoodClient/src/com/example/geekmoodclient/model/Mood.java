@@ -10,6 +10,7 @@ public class Mood implements Serializable{
      */
     private static final long serialVersionUID = 1L;
     private long id;
+    private String name;
     private String content;
     private Date postDate;
     private String image;
@@ -83,6 +84,14 @@ public class Mood implements Serializable{
 
     public void setImage(String image) {
 	this.image = image;
+    }
+
+    public String getName() {
+	return name;
+    }
+
+    public void setName(String name) {
+	this.name = name;
     }
     
     
