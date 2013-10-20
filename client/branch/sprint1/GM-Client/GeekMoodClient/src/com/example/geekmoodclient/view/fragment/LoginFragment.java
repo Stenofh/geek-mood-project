@@ -22,7 +22,7 @@ public class LoginFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
     		Bundle savedInstanceState) {
     	
-    	View view = inflater.inflate(R.layout.login, null);
+    	View view = inflater.inflate(R.layout.formulario_login, null);
     	edtLoginEmail = (EditText) view.findViewById(R.id.edt_email);
     	edtLoginSenha = (EditText) view.findViewById(R.id.edit_senha);
     	btnLogin = (Button) view.findViewById(R.id.btn_login);

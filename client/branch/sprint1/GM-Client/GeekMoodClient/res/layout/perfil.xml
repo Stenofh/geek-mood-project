@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rll_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imv_foto_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="33dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/txv_nome_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imv_foto_usuario"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/imv_foto_usuario"
+            android:text="Nome do usuario" />
+
+        <TextView
+            android:id="@+id/txv_nickname_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imv_foto_usuario"
+            android:layout_alignLeft="@+id/txv_nome_usuario"
+            android:text="Apelido do usuario" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rll_perfil"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+    </ListView>
+
+</RelativeLayout>
