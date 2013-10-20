@@ -30,6 +30,9 @@ public class Post {
     @Column(name = "teleze_count")
     private int countTeleze;
     
+    @Column(name="description")
+    private String description;
+    
     @Column(name = "post_date")
     private Date postDate;
 

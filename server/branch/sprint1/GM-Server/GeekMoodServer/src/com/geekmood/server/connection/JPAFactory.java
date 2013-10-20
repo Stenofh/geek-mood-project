@@ -1,27 +1,32 @@
 package com.geekmood.server.connection;
 
+import java.io.Serializable;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class JPAFactory {
+public class JPAFactory implements Serializable{
 
-    private EntityManagerFactory factory;
-    private static JPAFactory jpaFactory;
+    private static final long serialVersionUID = 1L;
+    private static EntityManagerFactory entityManagerFactory;
 
-    private JPAFactory() {
-	factory = Persistence.createEntityManagerFactory("nerd_mood");
+    /*
+     * Cria a unidade de persistencia de acordo com o persistence.xml. Na hora
+     * da montagem da classe pela JVM ele ja faz esse bloco
+     */
+    static {
+	entityManagerFactory = Persistence
+		.createEntityManagerFactory("nerd_mood");
     }
 
-    public static synchronized JPAFactory getInstance() {
-	if (jpaFactory == null) {
-	    jpaFactory = new JPAFactory();
-	}
-	return jpaFactory;
+    // Recupera o entityManager criado a partir da factory
+    public static EntityManager getEntityManager() {
+	return entityManagerFactory.createEntityManager();
     }
 
-    public EntityManager getEntityManager() {
-	return factory.createEntityManager();
+    public void close(EntityManager em) {
+	em.close();
     }
 
 }
