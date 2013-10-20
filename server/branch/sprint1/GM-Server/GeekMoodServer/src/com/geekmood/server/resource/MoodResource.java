@@ -1,5 +1,8 @@
 package com.geekmood.server.resource;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -18,15 +21,29 @@ public class MoodResource {
 
 	@Context
 	Request request;
+
+	private final Mood mood = new Mood(1, "Se sentindo o Capitão Nascimento",
+			"Aquele momento que vc está se sentindo autoritário e que ninguém pode te contestar, vc está causando medo nas pessoas.", "path://test");
+	private final Mood mood2 = new Mood(2, "Se sentindo feia com a Bruxa do 71.",
+			"Aquele momento que vc está se sentindo feia, por algum motivo vc não quer ver o espelho", "path://test");
+	private final Mood mood3 = new Mood(3, "Se sentindo um zumbi do The Walking Dead.",
+			"Aquele momento que vc está se sentindo sem disposição pra nada, principalmente para trabalhar!", "path://test");
+	private final Mood mood4 = new Mood(4, "Se sentido o Sheldon contando uma piada e ninguém entendeu! Bazinga!",
+			"Aquele momento que vc conta uma piada, talvez uma piada nerd, e ningupem entendeu, vc está frstado com isso.", "path://test");
+	private final Mood mood5 = new Mood(4, "Ligou o Xande Mode",
+			"Aquele momento que vc se encontra fissurado no trabalho, esqueceu a hora de ir pra casa! Não ente fome nem sede!!! É vc está viciado em Trabalho!", "path://test");
+	private final Mood mood6 = new Mood(4, "Ligou o Seu Lunga Mode",
+			"Aquele momento que vc se encontra sem paciência, muitos diriam que vc está rabugento, tolerância zero, se uma pessoa vacilar ao conversar contigo com certeza vc vai cortar o assunto com uma frase desagradável!", "path://test");
+
 	
-	private final Mood mood = new Mood(1, "Chuck Norris", "Mordido por uma naja", "path://test");
+	private final List<Mood> moods = new ArrayList<Mood>();
 
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String respondAsReady() {
 		return MoodResource.class + " is ready";
 	}
-	
+
 	@GET
 	@Path("sample")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -35,6 +52,19 @@ public class MoodResource {
 		System.out.println("Mood sample: " + mood.toString());
 		return mood;
 
+	}
+
+	@GET
+	@Path("allmoods")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Mood> getAllMoods() {
+		moods.add(mood);
+		moods.add(mood2);
+		moods.add(mood3);
+		moods.add(mood4);
+		moods.add(mood5);
+		moods.add(mood6);
+		return moods;
 	}
 
 }
