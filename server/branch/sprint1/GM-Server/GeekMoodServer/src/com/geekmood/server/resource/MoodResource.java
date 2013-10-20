@@ -22,18 +22,18 @@ public class MoodResource {
 	@Context
 	Request request;
 
-	private final Mood mood = new Mood(1, "Se sentindo o Capitão Nascimento",
-			"Aquele momento que vc está se sentindo autoritário e que ninguém pode te contestar, vc está causando medo nas pessoas.", "path://test");
+	private final Mood mood = new Mood(1, "Se sentindo o Capitï¿½o Nascimento",
+			"Aquele momento que vc estï¿½ se sentindo autoritï¿½rio e que ninguï¿½m pode te contestar, vc estï¿½ causando medo nas pessoas.", "path://test");
 	private final Mood mood2 = new Mood(2, "Se sentindo feia com a Bruxa do 71.",
-			"Aquele momento que vc está se sentindo feia, por algum motivo vc não quer ver o espelho", "path://test");
+			"Aquele momento que vc estï¿½ se sentindo feia, por algum motivo vc nï¿½o quer ver o espelho", "path://test");
 	private final Mood mood3 = new Mood(3, "Se sentindo um zumbi do The Walking Dead.",
-			"Aquele momento que vc está se sentindo sem disposição pra nada, principalmente para trabalhar!", "path://test");
-	private final Mood mood4 = new Mood(4, "Se sentido o Sheldon contando uma piada e ninguém entendeu! Bazinga!",
-			"Aquele momento que vc conta uma piada, talvez uma piada nerd, e ningupem entendeu, vc está frstado com isso.", "path://test");
+			"Aquele momento que vc estï¿½ se sentindo sem disposiï¿½ï¿½o pra nada, principalmente para trabalhar!", "path://test");
+	private final Mood mood4 = new Mood(4, "Se sentido o Sheldon contando uma piada e ninguï¿½m entendeu! Bazinga!",
+			"Aquele momento que vc conta uma piada, talvez uma piada nerd, e ningupem entendeu, vc estï¿½ frstado com isso.", "path://test");
 	private final Mood mood5 = new Mood(4, "Ligou o Xande Mode",
-			"Aquele momento que vc se encontra fissurado no trabalho, esqueceu a hora de ir pra casa! Não ente fome nem sede!!! É vc está viciado em Trabalho!", "path://test");
+			"Aquele momento que vc se encontra fissurado no trabalho, esqueceu a hora de ir pra casa! Nï¿½o ente fome nem sede!!! ï¿½ vc estï¿½ viciado em Trabalho!", "path://test");
 	private final Mood mood6 = new Mood(4, "Ligou o Seu Lunga Mode",
-			"Aquele momento que vc se encontra sem paciência, muitos diriam que vc está rabugento, tolerância zero, se uma pessoa vacilar ao conversar contigo com certeza vc vai cortar o assunto com uma frase desagradável!", "path://test");
+			"Aquele momento que vc se encontra sem paciï¿½ncia, muitos diriam que vc estï¿½ rabugento, tolerï¿½ncia zero, se uma pessoa vacilar ao conversar contigo com certeza vc vai cortar o assunto com uma frase desagradï¿½vel!", "path://test");
 
 	
 	private final List<Mood> moods = new ArrayList<Mood>();
